@@ -1,0 +1,9 @@
+.header {
+    text-align: center;
+    background-color: azure;
+    padding: 20px;
+}
+
+.header h1 {
+    color: brown;
+}
