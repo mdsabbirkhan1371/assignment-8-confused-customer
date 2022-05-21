@@ -38,7 +38,9 @@ const Shop = () => {
             <div className="cart-container">
                 <div className='cart'>
                     <h2>Selcted Watches</h2>
-                    {cart.map(singleCart => <Cart key={singleCart.id} cart={singleCart}></Cart>)}
+                    <ol>
+                        {cart.map(singleCart => <Cart key={singleCart.id} cart={singleCart}></Cart>)}
+                    </ol>
                     {
                         randomProduct?.name ? <p>{randomProduct?.name}</p> : <button
                             onClick={handleRandomProduct} className='btn'><p>Chose One For Me</p></button>

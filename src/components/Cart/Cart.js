@@ -4,9 +4,9 @@ const Cart = (props) => {
 
     const { cart } = props;
     return (
-        <div>
-            <p>{cart.name}</p>
-        </div>
+
+        <li>{cart.name}</li>
+
     );
 
 };
