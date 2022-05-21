@@ -14,8 +14,14 @@ const Shop = () => {
     }, [])
 
     const addToCart = (product) => {
-        const newCart = [...cart, product]
-        setCart(newCart)
+        if (cart.length >= 4) {
+            alert("You can't Select More Than Four Product")
+        } else {
+
+            const newCart = [...cart, product]
+            setCart(newCart)
+        }
+
     }
 
     const handleRandomProduct = () => {
