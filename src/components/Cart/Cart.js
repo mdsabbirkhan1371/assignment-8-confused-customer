@@ -4,9 +4,7 @@ const Cart = (props) => {
 
     const { cart } = props;
     return (
-
         <li>{cart.name}</li>
-
     );
 
 };
