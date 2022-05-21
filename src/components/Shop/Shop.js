@@ -5,7 +5,8 @@ import Queston from '../Question/Queston';
 import('./Shop.css')
 const Shop = () => {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+    const [randomProduct, setRandomProduct] = useState({});
     useEffect(() => {
         fetch('product.json')
             .then(res => res.json())
@@ -15,6 +16,12 @@ const Shop = () => {
     const addToCart = (product) => {
         const newCart = [...cart, product]
         setCart(newCart)
+    }
+
+    const handleRandomProduct = () => {
+        const random = Math.floor(Math.random() * cart.length);
+        setRandomProduct(cart[random]);
+        setCart([]);
     }
 
     return (
@@ -32,7 +39,11 @@ const Shop = () => {
                 <div className='cart'>
                     <h2>Selcted Watches</h2>
                     {cart.map(singleCart => <Cart key={singleCart.id} cart={singleCart}></Cart>)}
-                    <button className='btn'><p>Chose One For Me</p></button>
+                    {
+                        randomProduct?.name ? <p>{randomProduct?.name}</p> : <button
+                            onClick={handleRandomProduct} className='btn'><p>Chose One For Me</p></button>
+                    }
+
                 </div>
             </div>
             <Queston></Queston>
