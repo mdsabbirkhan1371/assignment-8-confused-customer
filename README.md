@@ -1,9 +1,11 @@
 # Our confused customer choosen product;
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Our Live Site Link is Here](https://cheerful-cendol-4cdd94.netlify.app/)
 
-## Netlify link or live site link
-https://cheerful-cendol-4cdd94.netlify.app/
+## Private repository  link
+
+https://github.com/Programming-Hero-Web-Course4/lucky-one-mdsabbirkhan1371
+
 
 In the project directory, you can run:
 
